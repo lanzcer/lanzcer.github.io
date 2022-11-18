@@ -1,0 +1,510 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Markdown 语法学习笔记 | 𝓛 𝓐 𝓝</title>
+
+<link rel="shortcut icon" href="https://lanzcer.github.io/favicon.ico?v=1668776624887">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://lanzcer.github.io/styles/main.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"> -->
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages//dart.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script> -->
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9GBC752N9F"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-9GBC752N9F');
+</script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+    
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            𝓛 𝓐 𝓝
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="changeNavbar">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    首页
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    学习笔记
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    艺术鉴赏
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    随想录
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tags" class="menu gt-a-link">
+                    标签
+                </a>
+                
+            </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1668776624887"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = () => {
+        var element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    Markdown 语法学习笔记
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-11-15 ·
+                    </time>
+                    
+                        <a href="https://lanzcer.github.io/tag/KPz9tf0cM/" class="post-tags">
+                            # 技术学习
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <h1 id="markdown-语法">Markdown 语法</h1>
+<p><ul class="markdownIt-TOC">
+<li><a href="#markdown-%E8%AF%AD%E6%B3%95">Markdown 语法</a><br>
+*
+<ul>
+<li><a href="#%E5%9D%97%E5%85%83%E7%B4%A0">块元素</a>
+<ul>
+<li><a href="#%E6%AE%B5%E8%90%BD%E5%92%8C%E6%8D%A2%E8%A1%8C%E7%AC%A6">段落和换行符</a></li>
+<li><a href="#%E6%A0%87%E9%A2%98">标题</a></li>
+<li><a href="#%E5%BC%95%E7%94%A8%E6%96%87%E5%AD%97">引用文字</a></li>
+<li><a href="#%E5%88%97%E8%A1%A8">列表</a></li>
+<li><a href="#%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8">任务列表</a></li>
+<li><a href="#%E6%A0%85%E6%A0%8F%E5%BC%8F%E4%BB%A3%E7%A0%81%E5%9D%97">（栅栏式）代码块</a></li>
+<li><a href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E5%9D%97">数学公式块</a></li>
+<li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
+<li><a href="#%E8%84%9A%E6%B3%A8">脚注</a></li>
+<li><a href="#%E6%B0%B4%E5%B9%B3%E7%BA%BF">水平线</a></li>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+</ul>
+</li>
+<li><a href="#span%E5%85%83%E7%B4%A0">Span元素</a>
+<ul>
+<li><a href="#%E5%9F%BA%E7%A1%80%E6%A0%BC%E5%BC%8F%E7%B1%BB">基础格式类</a>
+<ul>
+<li><a href="#%E5%BC%BA%E8%B0%83%E6%96%9C%E4%BD%93">强调（斜体）</a></li>
+<li><a href="#%E7%B2%97%E4%BD%93">粗体</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81">代码</a></li>
+<li><a href="#%E5%88%A0%E9%99%A4%E7%BA%BF">删除线</a></li>
+<li><a href="#%E4%B8%8B%E5%88%92%E7%BA%BF">下划线</a></li>
+<li><a href="#%E4%B8%8A%E4%B8%8B%E6%A0%87">上下标</a></li>
+<li><a href="#%E9%AB%98%E4%BA%AE">高亮</a></li>
+<li><a href="#%E8%A1%A8%E6%83%85%E7%AC%A6%E5%8F%B7">表情符号</a></li>
+<li><a href="#%E5%86%85%E8%81%94%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">内联数学公式</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%B6%E4%BB%96%E5%85%83%E7%B4%A0">其他元素</a></li>
+<li><a href="#%E9%93%BE%E6%8E%A5">链接</a>
+<ul>
+<li><a href="#%E5%86%85%E9%83%A8%E9%93%BE%E6%8E%A5%E5%86%85%E8%81%94">内部链接（内联）</a></li>
+<li><a href="#%E5%A4%96%E9%83%A8%E9%93%BE%E6%8E%A5">外部链接</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%BE%E7%89%87">图片</a></li>
+<li><a href="#%E8%A7%86%E9%A2%91">视频</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<h3 id="块元素">块元素</h3>
+<h4 id="段落和换行符">段落和换行符</h4>
+<p>段落只是一行或多行连续的文本。在 markdown 源代码中，段落由多个空行分隔。在Typora中，您只需按下 <code>Return</code> 即可创建新段落。</p>
+<p>按 <code>Shift</code> + <code>Return</code> 可创建单个换行符。但是，大多数 markdown 解析器将忽略单行中断，要使其他 markdown 解析器识别您的换行符，可以在行尾留下两个空格，或者插入 <code>&lt;br/&gt;</code>.</p>
+<h4 id="标题">标题</h4>
+<pre><code># 一级标题
+## 二级标题
+……
+###### 六级标题
+</code></pre>
+<p>标题的等级设定使用“#”符号，几个符号表示几级标题，符号后面必须带有一个空白字符，最高六级标题。</p>
+<h4 id="引用文字">引用文字</h4>
+<pre><code>&gt;引用1
+&gt;&gt;引用2
+&gt;&gt;&gt;引用3
+#上面为多级引用
+
+&gt;引用1
+&gt;引用2
+#此为多段引用
+</code></pre>
+<p>在Markdown语法中，输入“&gt;&quot;后接内容就是引用，与标题的命令等级类似，多少个”&gt;“符号就是多少级引用，单击<code>Return</code>键会延续上一行引用，并且连续按下<code>Return</code>键可以中断引用。</p>
+<h4 id="列表">列表</h4>
+<pre><code>#无序表
+* 蓝色
+* 绿色
+* 黄色
+———————————————
+* * * * * *
+无序表的多级序列
+
+#有序表
+1. 首先
+2. 其次
+3. 最后
+4. 2. 3. 4.
+有序的多级序列
+
+</code></pre>
+<p>创建无序表时，不仅可以用” * “，还可以用” + “，” - ”，同理列表存在多级序列，每一级序列书写时用<code>Space</code>键隔开，按下<code>Return</code>键可以中断序列。</p>
+<h4 id="任务列表">任务列表</h4>
+<pre><code>- [ ] 未勾选任务
+- [x] 已勾选任务
+- [ ] - [x] 多个可选框
+</code></pre>
+<p>任务列表的标记使用 [ ]或[x](未完成和已完成)的项目，并且这是个可修改状态的一个标记。需要注意的是： 这个标记首先用列表的语法，再输入一个空白字符，再输入&quot;[ ]&quot;(当状态为未勾选是，两个中括号之间也必须有个空白字符)，再输入一个空白字符即生效。</p>
+<h4 id="栅栏式代码块">（栅栏式）代码块</h4>
+<pre><code>```
+function test() {
+  console.log(&quot;notice the blank line before this function?&quot;);
+}
+```
+
+语法高亮：
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new(&quot;Hello World!&quot;)
+puts markdown.to_html
+```
+</code></pre>
+<p>Typora仅支持 Github Flavored Markdown 中的栅栏式代码块。不支持 markdown 中的原始代码块。</p>
+<p>使用栅栏式代码块很简单：输入“```”之后输入一个可选的语言标识符，然后按<code>return</code>键后输入代码，我们将通过语法高亮显示它。值得注意的是：在第一个&quot;```&quot;符号后，可以接上代码语言可实现高亮效果。</p>
+<h4 id="数学公式块">数学公式块</h4>
+<p>这里引用官方文档的例子</p>
+<pre><code>$$
+\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \\
+\end{vmatrix}
+$$
+</code></pre>
+<p>上面代码实现的效果如下所示</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi mathvariant="bold">V</mi><mn>1</mn></msub><mo>×</mo><msub><mi mathvariant="bold">V</mi><mn>2</mn></msub><mo>=</mo><mrow><mo fence="true">∣</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi mathvariant="bold">i</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi mathvariant="bold">j</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi mathvariant="bold">k</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>X</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>u</mi></mrow></mfrac></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>Y</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>u</mi></mrow></mfrac></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>X</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>v</mi></mrow></mfrac></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>Y</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>v</mi></mrow></mfrac></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd></mtr></mtable><mo fence="true">∣</mo></mrow></mrow><annotation encoding="application/x-tex">\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix} 
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \\
+\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \\
+\end{vmatrix}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83611em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathbf" style="margin-right:0.01597em;">V</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83611em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathbf" style="margin-right:0.01597em;">V</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.6802159999999997em;vertical-align:-1.590108em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.08597em;"><span style="top:-1.05597em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-1.6619700000000002em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.26797em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.87397em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.47997em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-4.08597em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500299999999998em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.090108em;"><span style="top:-4.250108em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathbf">i</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801079999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight">u</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight" style="margin-right:0.07847em;">X</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-1.769892em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801079999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">v</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight" style="margin-right:0.07847em;">X</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.590108em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.090108em;"><span style="top:-4.250108em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathbf">j</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801079999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight">u</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight" style="margin-right:0.22222em;">Y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-1.769892em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8801079999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">v</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault mtight" style="margin-right:0.22222em;">Y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.590108em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.090108em;"><span style="top:-4.250108em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathbf">k</span></span></span></span><span style="top:-3.0099999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-1.769892em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.590108em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.08597em;"><span style="top:-1.05597em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-1.6619700000000002em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.26797em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.87397em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.47997em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-4.08597em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5500299999999998em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>此语法输入“$$&quot;之后按下<code>Return</code>键即可输入表达式，这里的表达式使用的是<em>LaTex</em>，具体写法仍需继续学习。</p>
+<h4 id="表格">表格</h4>
+<pre><code>| 项目1 | 项目2   |                 | 项目1 | 项目2   |
+| ----- | ----- |                  | :----- | -----:|
+| a     | 1     |                  | a     | 1     |
+| b     | 2     |                  | b     | 2     |
+</code></pre>
+<p>上述代码实现效果</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">项目1(左对齐)</th>
+<th style="text-align:center">项目2（居中）</th>
+<th style="text-align:right">项目3（右对齐）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">a</td>
+<td style="text-align:center">1</td>
+<td style="text-align:right">一</td>
+</tr>
+<tr>
+<td style="text-align:left">b</td>
+<td style="text-align:center">2</td>
+<td style="text-align:right">二</td>
+</tr>
+</tbody>
+</table>
+<p>输入 <code>| First Header | Second Header |</code> 并按下 <code>return</code> 键将创建一个包含两列的表。</p>
+<p>创建表后，焦点在该表上将弹出一个表格工具栏，您可以在其中调整表格，对齐或删除表格。您还可以使用上下文菜单来复制和添加/删除列/行。</p>
+<p>事实上我们并不用去写表格的源代码，在建立表头之后，大多数的编辑器都会出现类似于Excel的表格编辑模式。但是，如果需要编辑表格相关格式（例如上面实例中左右对齐），则需要在源码分割线出稍作调整。最左侧的冒号表示左对齐的列; 最右侧的冒号表示右对齐的列; 两侧的冒号表示中心对齐的列。</p>
+<p>另外，在表格中也可以内嵌其他Markdown语法，如如链接，粗体，斜体或删除线。</p>
+<h4 id="脚注">脚注</h4>
+<pre><code>可以像这样创建脚注[^1]. 
+
+[^1]: 这里是脚注内容。
+</code></pre>
+<p>上面语法示例效果：可以像这样创建脚注<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
+<p>鼠标移动到脚注上可查看内容，另外脚注也支持粗体，斜体，下划线等基本编辑格式</p>
+<h4 id="水平线">水平线</h4>
+<p>输入 <code>***</code> 或 <code>---</code> 再接上空白字符，按 <code>return</code> 键将绘制一条水平线。</p>
+<hr>
+<h4 id="目录">目录</h4>
+<p>输入 <code>[toc]</code> 然后按 <code>Return</code> 键将创建一个“目录”部分，自动从文档内容中提取所有标题，其内容会自动更新。</p>
+<h3 id="span元素">Span元素</h3>
+<h4 id="基础格式类">基础格式类</h4>
+<h5 id="强调斜体">强调（斜体）</h5>
+<p>Markdown 将星号 <code>*</code> 和下划线<code>_</code> 视为强调的指示。用一个 <code>*</code> 或 <code>_</code> 包裹文本将使用HTML <code>&lt;em&gt;</code> 标签包裹文本。一般来说，键盘上快捷键为<code>Ctrl +I</code>,例如：</p>
+<pre><code>*单个星号*
+
+_单个下划线_
+wow_great_stuff
+</code></pre>
+<p>效果：</p>
+<p><em>单个星号</em></p>
+<p><em>单个下划线</em></p>
+<p>GFM将忽略单词中的下划线，这通常用在代码和名称中，如下所示：</p>
+<p><em>wow_great_stuff</em>   、 <em>do_this_and_do_that_and_another_thing.</em></p>
+<p>其中“\&quot;可作为转义字符，与编程语言类似用法</p>
+<h5 id="粗体">粗体</h5>
+<p>用两个<code> *</code> 或 <code>_</code> 包裹的文本将使用HTML <code>&lt;strong&gt;</code> 标签包裹，一般来说，键盘上快捷键为<code>Ctrl +B</code>例如：</p>
+<pre><code>**双星号**
+
+__双重下划线__
+
+</code></pre>
+<p>效果；</p>
+<p><strong>双星号</strong></p>
+<p><strong>双重下划线</strong></p>
+<p>上面两种格式产生的组合效果表示法， ：</p>
+<pre><code>***组合效果***
+___组合效果___
+</code></pre>
+<p><em><strong>组合效果</strong></em></p>
+<p><em><strong>组合效果</strong></em></p>
+<h5 id="代码">代码</h5>
+<p>要指示代码范围，请使用反引号（`）进行包裹。与预格式化的代码块不同，代码跨度表示正常段落中的代码。例如：</p>
+<pre><code>使用`printf()`函数。
+</code></pre>
+<p>使用<code>printf()</code>函数。</p>
+<h5 id="删除线">删除线</h5>
+<p>GFM通过添加语法来创建删除线文本，标准的Markdown中缺少该文本。</p>
+<p><code>~~错误的文字。~~</code> 变成 <s>错误的文字。</s></p>
+<h5 id="下划线">下划线</h5>
+<p>下划线由原始HTML提供支持。</p>
+<p><code>&lt;u&gt;下划线&lt;/u&gt;</code> 变成 <u>下划线</u></p>
+<h5 id="上下标">上下标</h5>
+<p>此功能在Typora体验，其他编辑器未知，首先，请在 <code>偏好设置</code> 面板 -&gt; <code>Markdown扩展语法</code> 选项卡中启用它。然后用 <code>~</code> 来包裹下标内容，例如： <code>H~2~O</code>,<code>Na~2~SO~4~</code> , <code>X~long\ text~</code>/，效果H<sub>2</sub>O、X<sub>long text</sub>、Na<sub>2</sub>SO<sub>4</sub></p>
+<p>用 <code>^</code> 来包裹上标内容，例如： <code>X^2^</code>，<code>X^a+b^</code>效果：X<sup>2</sup>、X<sup>a+b</sup></p>
+<h5 id="高亮">高亮</h5>
+<p>同样，首先，请在 <code>偏好设置</code> 面板 -&gt; <code>Markdown扩展语法</code> 选项卡中启用它。然后用 <code>==</code> 来包裹高亮内容，例如： <code>==highlight==</code>,效果: <mark>highlight</mark></p>
+<h5 id="表情符号">表情符号</h5>
+<p>输入表情符号的语法是 <code>:smile:</code></p>
+<p>用户可以通过 <code>ESC</code> 按键触发表情符号的自动完成建议，或者在偏好设置面板里启用后自动触发表情符号。此外，还支持直接从 <code>Edit</code> -&gt; <code>Emoji &amp; Symbols</code> 菜单栏输入UTF8表情符号字符。</p>
+<h5 id="内联数学公式">内联数学公式</h5>
+<p>这个功能大部分编辑器应该都有，在Typora中在 <code>偏好设置</code> 面板 -&gt; <code>Markdown扩展语法</code> 选项卡中启用它。然后使用 <code>$</code> 来包裹TeX命令，例如： <code>$\lim_{x \to \infty} \exp(-x) = 0$</code> 将呈现为LaTeX命令。效果<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>lim</mi><mo>⁡</mo><mrow><mi>x</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mi>exp</mi><mo>⁡</mo><mo>(</mo><mo>−</mo><mi>x</mi><mo>)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lim_{x \to \infty} \exp(-x) = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop"><span class="mop">lim</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="mrel mtight">→</span><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">exp</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></p>
+<h4 id="其他元素">其他元素</h4>
+<h4 id="链接">链接</h4>
+<p>Markdown 支持两种类型的链接：内联和引用。这里我认为有两部分</p>
+<h5 id="内部链接内联">内部链接（内联）</h5>
+<p>在文本内部进行链接，一般是链接到某个标题或者书签，内部链接的语法与HTML一致</p>
+<pre><code>&lt;a href=&quot;###块元素&quot;&gt;首页&lt;/a&gt; 
+</code></pre>
+<p>上面代码实现效果 ：<a href="###块元素">点击跳转至块元素部分</a></p>
+<h5 id="外部链接">外部链接</h5>
+<pre><code>点击跳转到[百度](https://www.baidu.com/)
+点击跳转到[百度][baidu]
+点击跳转到[微软][]官网
+[微软]:https://www.microsoft.com/zh-cn/
+[baidu]:https://www.baidu.com/ &quot;Baidu&quot;
+</code></pre>
+<p>外部链接一般是其他站点，上面代码实现效果:</p>
+<p>点击跳转到<a href="https://www.baidu.com/">百度</a>               点击跳转到<a href="https://www.baidu.com/" title="Baidu">百度</a>             点击跳转到<a href="https://www.microsoft.com/zh-cn/">微软</a>官网</p>
+<p>上述前两条表述方式在Markdown里统一，第三个在某些编辑器里并不适用。</p>
+<p>此外，大部分编辑器都支持直接插入URL，例如，这是Typora官方文档https://support.typora.io/zh/Markdown-Reference 或者用一对&quot;&lt;&gt;&quot;,中间可以写入邮箱，网址等，其效果一致。</p>
+<h4 id="图片">图片</h4>
+<p>图像与链接类似， 但在链接语法之前需要添加额外的 <code>!</code> 字符。 图像语法如下所示：</p>
+<pre><code>![替代文字](/path/to/img.jpg)
+
+![替代文字](/path/to/img.jpg &quot;可选标题&quot;)
+###########################
+[![路过图床文件示例](https://s1.ax1x.com/2022/11/14/zAn8FU.jpg)](https://imgse.com/i/zAn8FU)
+</code></pre>
+<p>可以使用拖放操作从图像文件或浏览器来插入图像。并通过单击图像修改 markdown 源代码。如果图像在拖放时与当前编辑文档位于同一目录或子目录中，则将使用相对路径。这里其实目前最主流的还是使用图床工具，这里推荐几个图床，<a href="https://imgse.com/">路过图床</a>（支持外链，上传可复制各种语法）、<a href="https://imgur.com/">忘了名字的图床</a>、<a href="https://www.helloimg.com/">Hello图床</a>，这几个图床速度还行，</p>
+<figure data-type="image" tabindex="1"><a href="https://imgse.com/i/zAn8FU"><img src="https://s1.ax1x.com/2022/11/14/zAn8FU.jpg" alt="路过图床文件示例" loading="lazy"></a></figure>
+<p>上图是引用图床上的图片效果，还不错。</p>
+<h4 id="视频">视频</h4>
+<pre><code>&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=286617572&amp;bvid=BV1Zf4y1X7Kt&amp;cid=220006003&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+</code></pre>
+<p>视频的引用可参考HTML语法，上面代码效果</p>
+<iframe src="//player.bilibili.com/player.html?aid=286617572&bvid=BV1Zf4y1X7Kt&cid=220006003&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>这里是脚注内容。 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://lanzcer.github.io/post/li-yong-github-pagesgridea-da-jian-ge-ren-bo-ke-bing-tian-jia-ping-lun-xi-tong-ji-ge-ren-yu-ming/" class="post-title gt-a-link">
+                    利用Github Pages+Gridea搭建个人博客并添加评论系统及个人域名
+                </a>
+            </div>
+        
+
+        
+
+        
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<script>
+    // md5.min.js
+    !function(n){
+        "use strict";
+        function d(n,t){var r=(65535&n)+(65535&t);return(n>>16)+(t>>16)+(r>>16)<<16|65535&r}
+        function f(n,t,r,e,o,u){return d((c=d(d(t,n),d(e,u)))<<(f=o)|c>>>32-f,r);var c,f}
+        function l(n,t,r,e,o,u,c){return f(t&r|~t&e,n,t,o,u,c)}
+        function v(n,t,r,e,o,u,c){return f(t&e|r&~e,n,t,o,u,c)}
+        function g(n,t,r,e,o,u,c){return f(t^r^e,n,t,o,u,c)}
+        function m(n,t,r,e,o,u,c){return f(r^(t|~e),n,t,o,u,c)}
+        function i(n,t){var r,e,o,u,c;n[t>>5]|=128<<t%32,n[14+(t+64>>>9<<4)]=t;var f=1732584193,i=-271733879,a=-1732584194,h=271733878;for(r=0;r<n.length;r+=16)f=l(e=f,o=i,u=a,c=h,n[r],7,-680876936),h=l(h,f,i,a,n[r+1],12,-389564586),a=l(a,h,f,i,n[r+2],17,606105819),i=l(i,a,h,f,n[r+3],22,-1044525330),f=l(f,i,a,h,n[r+4],7,-176418897),h=l(h,f,i,a,n[r+5],12,1200080426),a=l(a,h,f,i,n[r+6],17,-1473231341),i=l(i,a,h,f,n[r+7],22,-45705983),f=l(f,i,a,h,n[r+8],7,1770035416),h=l(h,f,i,a,n[r+9],12,-1958414417),a=l(a,h,f,i,n[r+10],17,-42063),i=l(i,a,h,f,n[r+11],22,-1990404162),f=l(f,i,a,h,n[r+12],7,1804603682),h=l(h,f,i,a,n[r+13],12,-40341101),a=l(a,h,f,i,n[r+14],17,-1502002290),f=v(f,i=l(i,a,h,f,n[r+15],22,1236535329),a,h,n[r+1],5,-165796510),h=v(h,f,i,a,n[r+6],9,-1069501632),a=v(a,h,f,i,n[r+11],14,643717713),i=v(i,a,h,f,n[r],20,-373897302),f=v(f,i,a,h,n[r+5],5,-701558691),h=v(h,f,i,a,n[r+10],9,38016083),a=v(a,h,f,i,n[r+15],14,-660478335),i=v(i,a,h,f,n[r+4],20,-405537848),f=v(f,i,a,h,n[r+9],5,568446438),h=v(h,f,i,a,n[r+14],9,-1019803690),a=v(a,h,f,i,n[r+3],14,-187363961),i=v(i,a,h,f,n[r+8],20,1163531501),f=v(f,i,a,h,n[r+13],5,-1444681467),h=v(h,f,i,a,n[r+2],9,-51403784),a=v(a,h,f,i,n[r+7],14,1735328473),f=g(f,i=v(i,a,h,f,n[r+12],20,-1926607734),a,h,n[r+5],4,-378558),h=g(h,f,i,a,n[r+8],11,-2022574463),a=g(a,h,f,i,n[r+11],16,1839030562),i=g(i,a,h,f,n[r+14],23,-35309556),f=g(f,i,a,h,n[r+1],4,-1530992060),h=g(h,f,i,a,n[r+4],11,1272893353),a=g(a,h,f,i,n[r+7],16,-155497632),i=g(i,a,h,f,n[r+10],23,-1094730640),f=g(f,i,a,h,n[r+13],4,681279174),h=g(h,f,i,a,n[r],11,-358537222),a=g(a,h,f,i,n[r+3],16,-722521979),i=g(i,a,h,f,n[r+6],23,76029189),f=g(f,i,a,h,n[r+9],4,-640364487),h=g(h,f,i,a,n[r+12],11,-421815835),a=g(a,h,f,i,n[r+15],16,530742520),f=m(f,i=g(i,a,h,f,n[r+2],23,-995338651),a,h,n[r],6,-198630844),h=m(h,f,i,a,n[r+7],10,1126891415),a=m(a,h,f,i,n[r+14],15,-1416354905),i=m(i,a,h,f,n[r+5],21,-57434055),f=m(f,i,a,h,n[r+12],6,1700485571),h=m(h,f,i,a,n[r+3],10,-1894986606),a=m(a,h,f,i,n[r+10],15,-1051523),i=m(i,a,h,f,n[r+1],21,-2054922799),f=m(f,i,a,h,n[r+8],6,1873313359),h=m(h,f,i,a,n[r+15],10,-30611744),a=m(a,h,f,i,n[r+6],15,-1560198380),i=m(i,a,h,f,n[r+13],21,1309151649),f=m(f,i,a,h,n[r+4],6,-145523070),h=m(h,f,i,a,n[r+11],10,-1120210379),a=m(a,h,f,i,n[r+2],15,718787259),i=m(i,a,h,f,n[r+9],21,-343485551),f=d(f,e),i=d(i,o),a=d(a,u),h=d(h,c);return[f,i,a,h]}
+        function a(n){var t,r="",e=32*n.length;for(t=0;t<e;t+=8)r+=String.fromCharCode(n[t>>5]>>>t%32&255);return r}
+        function h(n){var t,r=[];for(r[(n.length>>2)-1]=void 0,t=0;t<r.length;t+=1)r[t]=0;var e=8*n.length;for(t=0;t<e;t+=8)r[t>>5]|=(255&n.charCodeAt(t/8))<<t%32;return r}
+        function e(n){var t,r,e="0123456789abcdef",o="";for(r=0;r<n.length;r+=1)t=n.charCodeAt(r),o+=e.charAt(t>>>4&15)+e.charAt(15&t);return o}
+        function r(n){return unescape(encodeURIComponent(n))}
+        function o(n){return a(i(h(t=r(n)),8*t.length));var t}
+        function u(n,t){return function(n,t){var r,e,o=h(n),u=[],c=[];for(u[15]=c[15]=void 0,16<o.length&&(o=i(o,8*n.length)),r=0;r<16;r+=1)u[r]=909522486^o[r],c[r]=1549556828^o[r];return e=i(u.concat(h(t)),512+8*t.length),a(i(c.concat(e),640))}(r(n),r(t))}
+        function t(n,t,r){return t?r?u(t,n):e(u(t,n)):r?o(n):e(o(n))}
+        "function"==typeof define&&define.amd?define(function(){return t}):"object"==typeof module&&module.exports?module.exports=t:n.md5=t;
+    }(this);
+</script>
+
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '1ff2ee82baade326860f',
+    clientSecret: '18549a19ef1ae5c2436014c759d94e96f9c27188',
+    repo: 'lanzcer.github.io',
+    owner: 'lanzcer',
+    admin: ['lanzcer'],
+    id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false       // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+            
+
+            
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">众人寻他千百度，蓦然回首，那人却在灯火阑珊处</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/lanzcer" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+         Copyright  ©  2022  兰
+    </div>
+    <div>
+        Theme <a href="https://github.com/imhanjie/gridea-theme-pure" target="_blank">Pure</a>, Powered by <a
+                href="https://gridea.dev" target="_blank">Gridea</a> | <a href="https://lanzcer.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+</div>
+
+<script>
+  hljs.highlightAll()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
